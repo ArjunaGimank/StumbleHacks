@@ -26,7 +26,7 @@ const GoStumble = (auth) => new Promise((resolve, reject) => {
     console.log(`
 ＳＴＵＭＢＬＥ   ＨＡＣＫ
 
-By : ${chalk.red('ArjunaGimank')} - ${chalk.blue('https://dkmpostor.herokuapp.com/')}
+By : ${chalk.red('ArjunaGimank')}
 `);
 
     const auth = rs.question('[+] Tempel auth token lu : ');
