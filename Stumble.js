@@ -24,12 +24,12 @@ const GoStumble = (auth) => new Promise((resolve, reject) => {
 (async () => {
 
     console.log(`
-ＳＴＵＭＢＬＥ   ＨＡＣＫ
+ＳＴＵＭＢＬＥ   ＨＡＣＫ V1
 
-By : ${chalk.red('@ArjunaGimank')} - ${chalk.blue('/')}
+By : ${chalk.blue('@ArjunaGimank')}  ${chalk.blue('')}
 `);
 
-    const auth = rs.question('[+] Tempel Auth Token Lu : ');
+    const auth = rs.question('[+] Auth Token : ');
     console.log('');
 
     while (true) {
@@ -37,7 +37,7 @@ By : ${chalk.red('@ArjunaGimank')} - ${chalk.blue('/')}
         const result = await GoStumble(auth);
         if (!result) {
 
-            console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Wrong cookie or Expired cookie !`));
+            console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Wrong Token or Expired Token !`));
             break;
 
         } else if (result.includes('User')) {
@@ -47,7 +47,7 @@ By : ${chalk.red('@ArjunaGimank')} - ${chalk.blue('/')}
             const country = data.User.Country;
             const trophy = data.User.SkillRating;
             const crown = data.User.Crowns
-            console.log(chalk.green(`\r[ ${moment().format('HH:mm:ss')} ] Nama : ${username} | Country : ${country} | ${chalk.blue(`Trophy : ${trophy}`)} | ${chalk.blue(`Crown : ${crown}`)}`));
+            console.log(chalk.blue(`\r[ ${moment().format('HH:mm:ss')} ] Nickname : ${username} | Country : ${country} | ${chalk.blue(`Trophy : ${trophy}`)} | ${chalk.blue(`Crown : ${crown}`)}`));
             
         } else if (result == 'BANNED') {
             console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Banned !`));
