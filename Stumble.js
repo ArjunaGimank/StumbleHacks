@@ -5,7 +5,7 @@ const rs = require('readline-sync');
 
 const GoStumble = (auth) => new Promise((resolve, reject) => {
 
-    fetch('http://kitkabackend.eastus.cloudapp.azure.com:5010/round/finishv2/3', {
+    fetch('http://kitkabackend.eastus.cloudapp.azure.com:5010/round/finishv2/1', {
         method: 'GET',
         headers: {
             'authorization': auth
